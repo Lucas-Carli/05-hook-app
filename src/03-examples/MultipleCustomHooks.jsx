@@ -11,7 +11,7 @@ export const MultipleCustomHooks = () => {
 
     return (
         <>
-            <h1>Información del Pokemon</h1>
+            <h1>Información de Pokemons</h1>
             <hr />
 
             {isLoading 
@@ -28,12 +28,10 @@ export const MultipleCustomHooks = () => {
               ]}/>
             )}
 
-{/* 
-
-            <h2> {data?.name}</h2> */}
+             {/* <h2> {data?.name}</h2> */}
 
             <button onClick={ () => counter > 1 ? decrement() : null} className="btn btn-primary mt-2">Anterior</button>
-            <button onClick={ () => increment()} className="btn btn-primary mt-2">Siguiente</button>
+            <button disabled= {isLoading} onClick={ () => increment()} className="btn btn-primary mt-2">Siguiente</button>
 
         </>
 
